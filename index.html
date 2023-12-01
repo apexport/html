@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影视飓风</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .hMenu {
+            padding: 0 30px;
+            height: 80px;
+        }
+
+        li {
+            height: 62px;
+            list-style: none;
+            line-height: 30px;
+            text-align: center;
+            float: left;
+
+        }
+
+
+        .hMenu img {
+            height: 42px;
+        }
+
+        .content {
+            height: 80px;
+            padding: 0 30px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #signup {
+            background-color: black;
+            color: white;
+            margin: 0 0 0 15px;
+            padding: 0 30px;
+            border-radius: 20px;
+            height: 42px;
+            line-height: 42px;
+        }
+
+        #signin {
+            margin: 0px -30px 0px 30px;
+        }
+
+        .content a.link::after {
+            margin-top: 2px;
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #666;
+            transition: width .2s;
+        }
+
+        .content a.link:hover::after {
+            width: 100%;
+        }
+
+        .content a {
+            border-width: 50%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        #introimg {
+            position: absolute;
+            z-index: 99;
+            margin: -56px 0 0 -275px;
+            width: 555px;
+            height: 112px;
+            left: 50%;
+            top: 50%;
+            border-style: none;
+        }
+
+        h1 {
+            font-size: 48px;
+            /* margin: 50px 0px 70px 100px; */
+            margin-bottom: 80px;
+        }
+
+        .sources,
+        .selected {
+            padding: 80px 8%;
+        }
+
+        .panel {
+            width: 100%;
+            height: 500px;
+            margin: 0px 0px 0px 40px;
+            /* overflow: hidden; */
+            /* background-image: url("img/mars.png"); */
+            /* background-color: blue; */
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: -100%;
+            z-index: -3;
+        }
+
+        .bg img {
+            width: 100%;
+            height: 100%;
+            /* opacity: 0.5; */
+        }
+
+        .bg::after {
+            width: 100%;
+            height: 100%;
+            content: "";
+            display: block;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(30px);
+            position: relative;
+            top: -505px;
+        }
+
+        .leftpanel {
+            width: 70%;
+            height: 80%;
+            background-color: red;
+            float: left;
+            transform: translate(-10px, -20px);
+            z-index: 20;
+        }
+
+        .rightpanel {
+            width: 30%;
+            height: 100%;
+            /* background-color: blue; */
+            float: left;
+        }
+
+        .leftpanel img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .item {
+            margin-left: 30px;
+        }
+
+        .item p {
+            font-size: 32px;
+            color: white;
+            margin: 70px 0px 20px 0px;
+        }
+
+        .item span {
+            color: white;
+        }
+
+        .btn a {
+            color: black;
+            width: 140px;
+            height: 48px;
+            background-color: antiquewhite;
+            text-decoration: none;
+            padding: 20px 40px 20px 40px;
+            position: relative;
+            top: 140px;
+            left: 30px;
+        }
+
+        .selected {
+            background-color: #f7f7f8;
+        }
+
+        .selected .row {
+            display: flex;
+
+        }
+
+        .part {
+            margin-right: 33px;
+            margin-top: -30px;
+        }
+
+        .part .pic {
+            width: 328px;
+            height: 203px;
+            overflow: hidden;
+        }
+
+        .part .pic img {
+            width: 328px;
+            height: 203px;
+            transition: all 0.3s;
+        }
+
+        .part .pic img:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        .part .tit {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .more {
+            height: 47px;
+            width: 100%;
+            background-color: #E02C34;
+            color: white;
+            line-height: 47px;
+            text-align: right;
+            margin: 30px 0px 30px 0px;
+        }
+
+        .more p {
+            margin-right: 15px;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            display: flex;
+            width: 100%;
+            justify-content: space-around
+        }
+
+        .footer .left {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            font-size: 12px;
+        }
+
+        .footer .center {
+            display: flex;
+            padding: 10px;
+            margin-top: 50px;
+        }
+
+        .footer .center .h {
+            margin-right: 30px;
+        }
+
+        .footer .right img {
+            background-color: #bbb;
+            width: 200px;
+        }
+
+        #logo {
+            margin-left: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hMenu">
+        <div class="content">
+            <a href="index.html"><img id="logo" src="./img/logo.png" alt=""></a>
+            <a class="link" href="">产品</a>
+            <a class="link" href="">内容</a>
+            <a class="link" href="">素材库</a>
+            <a class="link" href="">Gate</a>
+            <a class="link" href="">闪电分镜</a>
+            <a class="link" href="support.html">服务与支持</a>
+            <a class="link" href="stormcrew.html">STORMCREW</a>
+            <a class="link" href="jobs.html">加入我们</a>
+            <a id="signin" href="signin.html">登录</a>
+            <a id="signup" href="signup.html">注册</a>
+        </div>
+
+    </div>
+    <div class="intro">
+        <video autoplay loop muted>
+            <source src="./img/banner-video-pc.mp4" type="video/mp4">
+        </video>
+        <img id="introimg" src="./img/motto.png" alt="">
+    </div>
+
+    <div class="sources">
+        <h1>素材库</h1>
+        <div class="panel">
+            <div class="leftpanel">
+                <img src="img/mars.png" alt="">
+            </div>
+            <div class="rightpanel">
+                <div class="item">
+                    <p>素材库</p>
+                    <span>假窗</span>
+                    <span>火星</span>
+                    <span>12K</span>
+
+                </div>
+                <div class="btn">
+                    <a href="">点击进入</a>
+                </div>
+            </div>
+            <div class="bg">
+                <img src="img/mars.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="selected">
+        <h1>精选</h1>
+        <div class="row">
+            <div class="part">
+                <div class="pic">
+                    <img src="./img/pic1.png" />
+                </div>
+                <div class="tit">上升：我们一起飞上3万米高空</div>
+            </div>
+            <div class="part">
+                <div class="pic"><img src="./img/pic2.png" /></div>
+                <div class="tit">一个百大UP主的创业故事</div>
+            </div>
+            <div class="part">
+                <div class="pic"><img src="./img/pic3.png" /></div>
+                <div class="tit">十天穿越一万公里，用12K杜比全景声给你…</div>
+            </div>
+        </div>
+        <div class="more">
+            <p>
+                查看更多精选
+            </p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="left">
+            <div class="v">互联网ICP备案：浙ICP备19028999号-2</div>
+            <div class="v">浙公安备330438547839号</div>
+            <div class="v">增值电信业务经营许可证: 浙B2-20201416</div>
+            <div class="v">Copyright © 2016-2023 杭州星奥传媒有限公司 版权所有</div>
+        </div>
+        <div class="center">
+            <div class="h">关于我们</div>
+            <div class="h">加入我们</div>
+            <div class="h">用户协议</div>
+            <div class="h">隐私政策</div>
+        </div>
+        <div class="right">
+            <img src="./img/motto.png" alt="">
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

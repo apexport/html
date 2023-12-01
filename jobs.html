@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入影视飓风</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hMenu {
+            padding: 0 30px;
+            height: 64px;
+            /* border: 1px solid red; */
+        }
+
+        .hMenu img {
+            height: 28px;
+        }
+
+        .content {
+            height: 100%;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        #signup {
+            background-color: black;
+            color: white;
+            margin: 0 0 0 15px;
+            padding: 0 30px;
+            border-radius: 20px;
+            height: 42px;
+            line-height: 42px;
+        }
+
+        #signin {
+            margin: 0px -30px 0px 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .link {
+            color: #666;
+            font-size: 14px;
+
+        }
+
+        .mr {
+            margin-right: 25px;
+        }
+
+        .ml {
+            margin-left: 25px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 340px;
+            overflow: hidden;
+            background: url(./img/jobs.jpg);
+            background-position: 50% 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center
+        }
+
+        .label {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            top: -59px;
+            justify-content: center;
+
+        }
+
+        .search {
+            height: 56px;
+            width: 800px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        input#search {
+            width: 651px;
+            background-color: white;
+            outline: none;
+            border: none;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            line-height: 56px;
+            font-size: 18px;
+            padding: 4px 0px 4px 50px;
+            box-shadow: 0 8px 24px 0 rgba(54, 97, 174, 0.14);
+            color: #eee;
+            transition: all 0.3s;
+
+        }
+
+        input#search:hover {
+            border: 1px solid black;
+
+        }
+
+        button {
+            width: 149px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-color: #242424;
+            color: white;
+            /* font-size: 26px; */
+            padding: 0 12px;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .career {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .filtit {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px 20px 10px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eff1f1;
+            align-items: center
+        }
+
+
+        .block,
+        span:first-child {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+
+
+        span:nth-child(2) {
+            font-size: 14px;
+        }
+
+        span {
+            font-weight: lighter;
+        }
+
+        .filter {
+            width: 30%;
+        }
+
+        .block {
+            font-size: 18px;
+            margin: 10px 0px 15px 10px;
+        }
+
+        .class {
+            margin-bottom: 45px;
+        }
+
+        .radio {
+            font-weight: lighter;
+            display: flex;
+            margin: 12px;
+
+        }
+
+        .radio p {
+            margin-left: 5px;
+        }
+
+        .details {
+            width: 70%;
+            margin-left: 30px;
+            padding-left: 40px;
+            border-left: 1px solid #eff1f1;
+        }
+
+        h1 {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .col {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .col:hover {
+            box-shadow: 0 8px 32px rgba(187, 191, 196, 0.25)
+        }
+
+        .coltit {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .coltit span {
+            font-size: 14px;
+            color: #BBBFC4;
+            font-weight: 500;
+        }
+
+        .tag {
+            color: #999;
+            margin-top: -5px;
+        }
+
+        .show {
+            color: #bbb;
+            /* font-weight: lighter; */
+            font-size: 14px;
+        }
+
+        .page {
+            font-weight: bold;
+            font-size: 14px;
+            text-align: right;
+            margin-top: 20px;
+            margin-bottom: 60px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hMenu">
+        <div class="content">
+            <a href=""><img src="./img/logo.png" alt=""></a>
+            <div class="link">
+                <a class="mr" href="index.html">官网主页</a>
+                <span>|</span>
+                <a class="ml" href="signin.html">登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+
+    </div>
+    <div class="label">
+        <div class="search">
+            <input id="search" placeholder="搜索职位">
+            <button>搜索</button>
+        </div>
+    </div>
+    <div class="career">
+        <div class="filter">
+            <div class="filtit">
+                <span>筛选</span>
+                <span>清除</span>
+            </div>
+            <div class="class">
+                <div class="block">
+                    职位类别
+                </div>
+                <div class="radio">
+                    <input type="checkbox" value="yignshi">
+                    <p>影视/媒体</p>
+                </div>
+            </div>
+            <div class="class">
+                <div class="block">
+                    城市
+                </div>
+                <div class="radio">
+                    <input type="checkbox">
+                    <p>杭州</p>
+                </div>
+            </div>
+        </div>
+        <div class="details">
+            <h1>开启新的工作（10）</h1>
+            <div class="col">
+                <div class="coltit">资深直播运营(数码3c +家居家电) 12-24K <span>CNY/月<span></div>
+                <div class="tag">杭州|全职|文娱/广告 /媒体/艺术</div>
+                <div class="show">[岗位关键词]
+                    数码3C+家居家电类目:</div>
+            </div>
+            <div class="col">
+                <div class="coltit">TD开发/音视频技术12-20K <span>CNY/月<span></div>
+                <div class="tag">杭州|全职|文娱/广告/ 媒体/艺术</div>
+                <div class="show">1、负责公司后期制作流程(DaVinci Resolve、Blender、 Houdini等) 的开发、建立与升级，搭建及升级优
+                    化数据流和工具的开发;</div>
+            </div>
+            <div class="col">
+                <div class="coltit">服装设计助理6-10K <span>CNY/月<span></div>
+                <div class="tag">杭州|全职|文娱/广告/ 媒体/艺术</div>
+                <div class="show">[该岗位投递必须附_上作品集，否刮无法通过初筛]</div>
+            </div>
+            <div class="col">
+                <div class="coltit">
+                    编曲师 11-22K<span>CNY/月</span>
+                </div>
+                <div class="tag">
+                    杭州|全职|文娱/广告/媒体/艺术-影视/媒体
+                </div>
+                <div class="show">
+                    1.负责S级项目、短句项目等部分仙姑的配乐编曲工作<br>
+                    2.与声音制作组其他同事一起，写作完成公司音频资产的制作
+                </div>
+            </div>
+            <div class="col">
+                <div class="coltit">
+                    实习制片(24届优先)
+                </div>
+                <div class="tag">
+                    杭州|全职|文娱/广告/媒体/艺术-影视/媒体
+                </div>
+                <div class="show">
+                    实习日薪: 170 CNY
+                </div>
+            </div>
+            <div class="col">
+                <div class="coltit">摄影师8-16K CNY/月</div>
+                <div class="tag">杭州|全职|文娱/广告/ 媒体/艺术-影视/媒体</div>
+                <div class="show">1.负责视频的创意拍摄和制作，具有高雅的审美情趣,擅长欧美矿告摄影手法汲光影处理手法;
+                    2.具备较好的美术功底和良好的镜头语言使用能力，能够配合编导或独立完成影片的拍摄剪辑制作;</div>
+            </div>
+            <div class="col">
+                <div class="coltit">制片8-18K CNY/月</div>
+                <div class="tag">杭州|全职|文娱/广告/ 媒体/艺术-影视/媒体</div>
+                <div class="show">岗位月薪: 8 -18k CNY</div>
+            </div>
+            <div class="col">
+                <div class="coltit">编导(科技组) 11-18K CNY/月</div>
+                <div class="tag">杭州|全职|文娱/广告/ 媒体/艺术-影视/媒体</div>
+                <div class="show">1.独负责影视飓风频道[ 数码科技评测向]的策划、选题、内容把控;
+                    -数码科技评测向:相机评测、数码产品评测、更硬核的up主改造等等节目形式
+                </div>
+            </div>
+            <div class="col">
+                <div class="coltit">编导(自媒体) 11-25K CNY/月</div>
+                <div class="tag">杭州|全职|文娱/广告/媒体/艺术-影视/媒体</div>
+                <div class="show">1、独负责团队分配到的商业项目的策划、选题、内容把控;<br>(我们的商业项目绝大多数，也是以节目形式，发在影视飓风频道)</div>
+            </div>
+            <div class="col">
+                <div class="coltit">实习摄影(24届优先)</div>
+                <div class="tag">杭州|实习| 文娱/广告/媒体/艺术-影视/媒体</div>
+                <div class="show">实习薪资:日薪170 CNY</div>
+            </div>
+
+            <div class="page">1</div>
+        </div>
+    </div>
+</body>
+
+</html>

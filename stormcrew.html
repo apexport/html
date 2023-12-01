@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORMCREW</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            height: 100%;
+            line-height: 30px;
+        }
+
+        span {
+            padding: 0 35px;
+            margin-left: -10px;
+        }
+
+        .wor {
+            margin-left: 50px;
+        }
+
+        a.fuc:hover {
+            padding-bottom: 5px;
+            border-bottom: 3px solid #005c3e;
+            color: #005c3e;
+            height: 100%;
+            line-height: 30px;
+        }
+
+        .menubar {
+            width: 100%;
+            padding: 10px 0;
+            height: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            inset: 0px;
+            background-color: white;
+
+        }
+
+        .menubar img {
+            margin-top: 3px;
+            width: 44px;
+            height: 26px;
+        }
+
+        .l {
+            margin-left: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .r {
+            font-size: 12px;
+            display: flex;
+            margin-right: 20px;
+            flex-direction: row;
+        }
+
+        .btw {
+            margin-left: 10px;
+        }
+
+        .scbanner {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .scbanner,
+        .goods {
+            padding: 0 20px;
+            width: calc(100% - 40px);
+        }
+
+        .scbanner {
+            height: 550px;
+            margin-top: 70px;
+        }
+
+        .scbanner .lbanner {
+            width: 70%;
+            margin-right: 10px;
+            background-color: red;
+            overflow: hidden;
+        }
+
+        .scbanner .rbanner {
+            width: 30%;
+            background-color: blue;
+            overflow: hidden;
+        }
+
+        .lbanner img,
+        .rbanner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .goods {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 400px 400px;
+            gap: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+
+        .card .img {
+            width: 100%;
+            height: 70%;
+            background-color: red;
+        }
+
+        .card .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .scfooter {
+            background-color: #001711;
+            padding: 20px;
+        }
+
+        hr {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .copyrights {
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            padding: 30px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menubar">
+        <div class="l">
+            <img src="./img/store/sclogo.png" alt="">
+            <div class="wor">
+                <span><a class="fuc" href="">服饰</a></span>
+                <span><a class="fuc" href="">配件</a></span>
+            </div>
+        </div>
+        <div class="r">
+            <div class="btw"><a href="">登录</a></div>
+            <div class="btw"><a href="">注册</a></div>
+        </div>
+    </div>
+    <div class="scbanner">
+        <div class="lbanner">
+            <img src="./img/store/banner1.jpg" alt="">
+
+        </div>
+        <div class="rbanner">
+            <img src="./img/store/banner2.jpg" alt="">
+        </div>
+
+    </div>
+    <div class="goods">
+        <div class="card">
+            <div class="img">
+                <img src="./img/store/clothing_diediele_cover1.jpg" alt="">
+            </div>
+            <div class="name">
+                叠叠乐
+            </div>
+            <div class="price">
+                ￥99
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./img/store/clothing_diediele_cover1.jpg" alt="">
+            </div>
+            <div class="name">
+                叠叠乐
+            </div>
+            <div class="price">
+                ￥99
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./img/store/clothing_diediele_cover1.jpg" alt="">
+            </div>
+            <div class="name">
+                叠叠乐
+            </div>
+            <div class="price">
+                ￥99
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./img/store/clothing_diediele_cover1.jpg" alt="">
+            </div>
+            <div class="name">
+                叠叠乐
+            </div>
+            <div class="price">
+                ￥99
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./img/store/clothing_diediele_cover1.jpg" alt="">
+            </div>
+            <div class="name">
+                叠叠乐
+            </div>
+            <div class="price">
+                ￥99
+            </div>
+        </div>
+    </div>
+    <div class="scfooter">
+        <hr>
+        <div class="copyrights">© 2005-2023 STORMCREW 版权所有，并保留所有权利。<br>
+            ICP备案证书号:浙ICP备19028999号-2
+        </div>
+    </div>
+
+</body>
+
+</html>
